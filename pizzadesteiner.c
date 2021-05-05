@@ -5,29 +5,32 @@ L(n)=L(n-1)+n*/
 int regioes (int x);
 int main()
 {
-	 int n;
-	 printf("Numero de linhas:  ");
-	 scanf("%d", &n);
-     printf("\nLinhas: %d",n);
-     printf("\nMaximo de regioes: %d",regioes(n));
-     return 0;
+   int n;
+   printf("Numero de linhas:  ");
+   scanf("%d", &n);
+   printf("\nLinhas: %d",n);
+   printf("\nMaximo de regioes: %d",regioes(n));
+	
+   return 0;
 }
 int regioes (int x) 
 {            
-	int r=0;
-	/*Caso base*/
+   int r=0;
+   /*Caso base*/
     if (x==0)
     {
 	r=1;
-	}
+    }
     else 
-	{
+    {
+	
 	r= x+ regioes(x-1);
-	}
-	/*O n˙mero m·ximo de regiıes no plano s„o as regiıes que j· haviam anteriormente
-	somado ao valor da linha/corte. Ex: Linha 3. Com duas linhas, haviam 4 regiıes. 4+3=7*/
-	return r;
-	}
+	
+    }
+/*O n√∫mero m√°ximo de regi√µes no plano s√£o as regi√µes que j√° haviam anteriormente
+somado ao valor da linha/corte. Ex: Linha 3. Com duas linhas, haviam 4 regi√µes. 4+3=7*/
+   return r;
+}
 	
 	
     
